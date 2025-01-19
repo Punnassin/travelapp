@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 
 const regions = {
   "ภาคกลาง": [
-    "Bangkok", "Ang Thong", "Chai Nat", "Kamphaeng Phet", "Lopburi",
+    "Bangkok", "Ang Thong", "Chai Nat", "Kamphaeng Phet", "Lop Buri",
     "Nakhon Nayok", "Nakhon Pathom", "Nonthaburi", "Pathum Thani",
     "Phetchabun", "Phichit", "Phitsanulok", "Samut Prakan",
     "Samut Sakhon", "Samut Songkhram", "Saraburi", "Sing Buri",
@@ -21,16 +21,16 @@ const regions = {
   "ภาคตะวันออกเฉียงเหนือ": [
     "Amnat Charoen", "Buriram", "Chaiyaphum", "Kalasin", "Khon Kaen",
     "Loei", "Maha Sarakham", "Mukdahan", "Nakhon Phanom", "Nakhon Ratchasima",
-    "Nong Bua Lamphu", "Nong Khai", "Roi Et", "Sakon Nakhon", "Si Sa Ket",
+    "Nong Bua Lam Phu", "Nong Khai", "Roi Et", "Sakon Nakhon", "Si Sa Ket",
     "Surin", "Ubon Ratchathani", "Udon Thani", "Yasothon", "Bueng Kan"
   ],
   "ภาคตะวันออก": [
-    "Chanthaburi", "Chachoengsao", "Chonburi", "Prachin Buri",
+    "Chanthaburi", "Chachoengsao", "Chon Buri", "Prachin Buri",
     "Rayong", "Sa Kaeo", "Trat"
   ],
   "ภาคใต้": [
     "Chumphon", "Krabi", "Nakhon Si Thammarat", "Narathiwat", "Pattani",
-    "Phang Nga", "Phatthalung", "Phuket", "Ranong", "Satun", "Songkhla",
+    "Phangnga", "Phatthalung", "Phuket", "Ranong", "Satun", "Songkhla",
     "Surat Thani", "Trang", "Yala"
   ]
 };
@@ -50,6 +50,10 @@ export default function MyApp() {
     const target = event.target;
     if (target.tagName === "path") {
       const provinceName = target.getAttribute("name") || "Unknown";
+      if (target === "Unknown") {
+        console.error("Could not find province");
+        return;
+      }
       console.log("Clicked on province:", provinceName);
       if (target.classList.contains(styles.selectedProvince)) {
         target.classList.add(styles.deselectedProvince);
@@ -62,16 +66,19 @@ export default function MyApp() {
   }
 
   function highlightProvince(provinceName) {
-    const paths = document.querySelectorAll("path"); // เลือก path ทั้งหมดใน SVG
-    paths.forEach((path) => {
-      if (path.getAttribute("name") === provinceName) {
-        path.classList.add(styles.selectedProvince);
-        path.classList.remove(styles.deselectedProvince);
-      } else {
-        path.classList.remove(styles.selectedProvince);
-        path.classList.add(styles.deselectedProvince);
-      }
-    });
+    const target = document.getElementsByName(provinceName)[0] || "Unknown"; // เลือก path ทั้งหมดใน SVG
+    if (target === "Unknown") {
+      console.error("Could not find province");
+      return;
+    }
+    console.log("Clicked on province:", provinceName);
+    if (target.classList.contains(styles.selectedProvince)) {
+      target.classList.add(styles.deselectedProvince);
+      target.classList.remove(styles.selectedProvince);
+    } else {
+      target.classList.add(styles.selectedProvince);
+      target.classList.remove(styles.deselectedProvince);
+    }
   }
 
   function goToInfoPage() {
