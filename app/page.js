@@ -92,7 +92,7 @@ export default function MyApp() {
         !!สามารถคลิ้กจังหวัดที่เคยไป!!
       </div>
        
-      <div style={{ textAlign: "center" , paddingLeft: "200px" }}>  
+      <div>  
         <div
           dangerouslySetInnerHTML={{ __html: svgContent }}
           onClick={handleLocationClick} 
