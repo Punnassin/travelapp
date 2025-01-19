@@ -2,7 +2,6 @@
 
 import styles from './page.module.css';
 import { useState, useEffect } from "react";
-import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const regions = {
   "ภาคกลาง": [
@@ -81,7 +80,6 @@ export default function MyApp() {
 
   return (
     <>
-      <SpeedInsights />
       <div style={{ textAlign: "center", marginBottom: "20px" }}>
         <img
           src="/IMG_6704.PNG" // รูปภาพที่อยู่ใน public
