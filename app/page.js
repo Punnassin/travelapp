@@ -88,28 +88,28 @@ export default function MyApp() {
         />
       </div>
 
-      <div style={{  top: "40%" , textAlign: "center" , marginBottom: "20px" }}>
+      <div style={{ textAlign: "center" , marginBottom: "20px" }}>
         !!สามารถคลิ้กจังหวัดที่เคยไป!!
       </div>
        
-      <div>  
+      <div style={{ marginBottom: "50px" }}>  
         <div
           dangerouslySetInnerHTML={{ __html: svgContent }}
           onClick={handleLocationClick} 
         ></div>
       </div>
-
-      <div style={{ position: "absolute", top: "200%", left: "65%", fontSize: "25px" , color: "#947480" }}>
+ 
+      <div style={{ color: "#947480" , display: "flex" , gap: "8px" , marginBottom: "10px" , paddingLeft: "20px" }}>
+        <div style={{ width: "40px" , height: "40px" , backgroundColor: "#d8b5a6" }}></div>
         จังหวัดที่เคยไป
-      </div>
+      </div>  
 
-      <div style={{ position: "absolute", top: "199%", left: "62%", width: "40px" , height: "40px" , backgroundColor: "#d8b5a6" }}></div>
-
-      <div style={{ position: "absolute", top: "204%", left: "62%", width: "40px" , height: "40px" , backgroundColor: "white" }}></div>
-
-      <div style={{ position: "absolute", top: "205%", left: "65%", fontSize: "25px" , color: "#947480" }}>
+      <div style={{ color: "#947480" , display: "flex" , gap: "8px" , marginBottom: "10px" , paddingLeft: "20px" }}>
+        <div style={{ width: "40px" , height: "40px" , backgroundColor: "white" }}></div>
         จังหวัดที่รอโอกาสไปเที่ยว
       </div>
+
+      
 
        
 
