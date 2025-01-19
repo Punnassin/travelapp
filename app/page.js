@@ -88,7 +88,7 @@ export default function MyApp() {
         />
       </div>
 
-      <div style={{ position: "absolute", top: "40%", left: "41%", fontSize: "25px" }}>
+      <div style={{  top: "40%" , textAlign: "center" }}>
         !!สามารถคลิ้กจังหวัดที่เคยไป!!
       </div>
        
