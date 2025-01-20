@@ -78,7 +78,7 @@ export default function MyApp () {
 
     <div ref={descriptionRef} style={{ backgroundColor: "#fbded4" , margin: "20px" , borderRadius: "20px"}}>
       <div style={{ padding: "10px" }}> 
-        <div style={{ backgroundColor: "#fff5e1" , width: "10%" , textAlign: "center" , borderRadius: "20px" , marginBottom: "10px" , padding: "15px" }}>
+        <div style={{ backgroundColor: "#fff5e1" , width: "200px" , textAlign: "center" , borderRadius: "20px" , marginBottom: "10px" , padding: "15px" }}>
           <div style={{ fontWeight: "bold" }}>{provincename}</div>
         </div>
       </div>   
