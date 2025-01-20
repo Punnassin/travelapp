@@ -7,8 +7,11 @@ export default function MyApp () {
   // const [count, setCount] = useState(20)
   const [svgContent, setSvgContent] = useState("")
   const [data, setData] = useState({});
-  const [description, setDescription] = useState("")
+  const [description1, setDescription1] = useState("")
+  const [description2, setDescription2] = useState("")
+  const [description3, setDescription3] = useState("")
   const [date, setDate] = useState("")
+  const [provincename, setProvincename] = useState("")
   const descriptionRef = useRef(null);
 
     
@@ -32,8 +35,11 @@ export default function MyApp () {
       const provinceName = target.getAttribute("name") || "Unknown"
       console.log("Clicked on province:", provinceName)
       
-      setDescription(data[provinceName].description)
+      setDescription1(data[provinceName].description1)
+      setDescription2(data[provinceName].description2)
+      setDescription3(data[provinceName].description3)
       setDate(data[provinceName].date)
+      setProvincename(data[provinceName].provincename)
 
       if (descriptionRef.current) {
         descriptionRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -70,9 +76,16 @@ export default function MyApp () {
       onClick={handleLocationClick}
     ></div>
 
-    <div ref={descriptionRef}>
-      <div>{description}</div>
-      <div>{date}</div>
+    <div ref={descriptionRef} style={{ backgroundColor: "#fbded4" , margin: "20px" , borderRadius: "20px"}}>
+      <div style={{ padding: "10px" }}> 
+        <div style={{ backgroundColor: "#fff5e1" , width: "10%" , textAlign: "center" , borderRadius: "20px" , marginBottom: "10px" , padding: "15px" }}>
+          <div style={{ fontWeight: "bold" }}>{provincename}</div>
+        </div>
+      </div>   
+      <div style={{ marginBottom: "10px" , padding: "10px" }}>{description1}</div>
+      <div style={{ marginBottom: "10px" , padding: "10px" }}>{description2}</div>
+      <div style={{ marginBottom: "10px" , padding: "10px" }}>{description3}</div>
+      <div style={{ marginBottom: "10px" , padding: "10px" }}>{date}</div>
     </div>
 
     <div style={{textAlign: "right", paddingRight: "20px"}}>
