@@ -90,15 +90,15 @@ export default function MyApp () {
       </div>   
       <div style={{ marginBottom: "10px" , padding: "10px" }}>{description1}</div>
       <div style={{ marginBottom: "10px" , padding: "10px" , textAlign: "center" }}>
-        <img style={{ width: "40%" , height: "auto" , borderRadius: "10px"}} src={img1 || null}></img>
+        <img style={{ width: "50%" , height: "auto" , borderRadius: "10px"}} src={img1 || null}></img>
       </div>
       <div style={{ marginBottom: "10px" , padding: "10px" }}>{description2}</div>
       <div style={{ marginBottom: "10px" , padding: "10px" , textAlign: "center" }}>
-        <img style={{ width: "40%" , height: "auto" , borderRadius: "10px"}} src={img2 || null}></img>
+        <img style={{ width: "50%" , height: "auto" , borderRadius: "10px"}} src={img2 || null}></img>
       </div>
       <div style={{ marginBottom: "10px" , padding: "10px" }}>{description3}</div>
       <div style={{ marginBottom: "10px" , padding: "10px" , textAlign: "center" }}>
-        <img style={{ width: "40%" , height: "auto" , borderRadius: "10px"}} src={img3 || null}></img>
+        <img style={{ width: "50%" , height: "auto" , borderRadius: "10px"}} src={img3 || null}></img>
       </div>
     </div>
 
