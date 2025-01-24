@@ -75,10 +75,12 @@ export default function MyApp () {
         />
       </div>
 
-    <div
-      dangerouslySetInnerHTML={{ __html: svgContent}}
-      onClick={handleLocationClick}
-    ></div>
+      <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+        <div style={{ marginBottom: "50px" , textAlign: "center" , width: "70%" , height: "auto"}}
+          dangerouslySetInnerHTML={{ __html: svgContent }}
+          onClick={handleLocationClick} 
+        ></div>
+      </div> 
 
     <div ref={descriptionRef} style={{ backgroundColor: "#fbded4" , margin: "20px" , borderRadius: "20px"}}>
       <div style={{ padding: "10px" }}> 
@@ -88,15 +90,15 @@ export default function MyApp () {
       </div>   
       <div style={{ marginBottom: "10px" , padding: "10px" }}>{description1}</div>
       <div style={{ marginBottom: "10px" , padding: "10px" , textAlign: "center" }}>
-        <img style={{ width: "40%" , height: "auto"}} src={img1 || null}></img>
+        <img style={{ width: "40%" , height: "auto" , borderRadius: "10px"}} src={img1 || null}></img>
       </div>
       <div style={{ marginBottom: "10px" , padding: "10px" }}>{description2}</div>
       <div style={{ marginBottom: "10px" , padding: "10px" , textAlign: "center" }}>
-        <img style={{ width: "40%" , height: "auto"}} src={img2 || null}></img>
+        <img style={{ width: "40%" , height: "auto" , borderRadius: "10px"}} src={img2 || null}></img>
       </div>
       <div style={{ marginBottom: "10px" , padding: "10px" }}>{description3}</div>
       <div style={{ marginBottom: "10px" , padding: "10px" , textAlign: "center" }}>
-        <img style={{ width: "40%" , height: "auto"}} src={img3 || null}></img>
+        <img style={{ width: "40%" , height: "auto" , borderRadius: "10px"}} src={img3 || null}></img>
       </div>
     </div>
 
