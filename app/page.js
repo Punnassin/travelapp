@@ -5,32 +5,32 @@ import { useState, useEffect } from "react";
 
 const regions = {
   "ภาคกลาง": [
-    "Bangkok", "Ang Thong", "Chai Nat", "Kamphaeng Phet", "Lop Buri",
-    "Nakhon Nayok", "Nakhon Pathom", "Nonthaburi", "Pathum Thani",
-    "Phetchabun", "Phichit", "Phitsanulok", "Samut Prakan",
-    "Samut Sakhon", "Samut Songkhram", "Saraburi", "Sing Buri",
-    "Suphan Buri", "Uthai Thani", "Phra Nakhon Si Ayutthaya", "Nakhon Sawan", "Sukhothai"
+    "กรุงเทพ", "อ่างทอง", "ชัยนาท", "Kamphaeng Phet", "ลพบุรี",
+    "นครนายก", "Nakhon Pathom", "นนทบุรี", "ปทุมธานี",
+    "Phetchabun", "Phichit", "Phitsanulok", "สมุทรปราการ",
+    "Samut Sakhon", "Samut Songkhram", "สระบุรี", "สิงห์บุรี",
+    "Suphan Buri", "Uthai Thani", "พระนครศรีอยุธยา", "Nakhon Sawan", "Sukhothai"
   ],
   "ภาคเหนือ": [
-    "Chiang Mai", "Chiang Rai", "Lampang", "Lamphun",
+    "เชียงใหม่", "Chiang Rai", "Lampang", "Lamphun",
     "Mae Hong Son", "Nan", "Phayao", "Phrae", "Uttaradit"
   ],
   "ภาคตะวันตก": [
     "Tak", "Kanchanaburi", "Phetchaburi", "Prachuap Khiri Khan", "Ratchaburi"
   ],
   "ภาคตะวันออกเฉียงเหนือ": [
-    "Amnat Charoen", "Buriram", "Chaiyaphum", "Kalasin", "Khon Kaen",
-    "Loei", "Maha Sarakham", "Mukdahan", "Nakhon Phanom", "Nakhon Ratchasima",
-    "Nong Bua Lam Phu", "Nong Khai", "Roi Et", "Sakon Nakhon", "Si Sa Ket",
-    "Surin", "Ubon Ratchathani", "Udon Thani", "Yasothon", "Bueng Kan"
+    "อำนาจเจริญ", "บุรีรัมย์", "ชัยภูมิ", "Kalasin", "Khon Kaen",
+    "Loei", "Maha Sarakham", "Mukdahan", "Nakhon Phanom", "นครราชสีมา",
+    "หนองบัวลำภู", "Nong Khai", "Roi Et", "Sakon Nakhon", "ศรีสะเกษ",
+    "สุรินทร์", "อุบลราชธานี", "Udon Thani", "ยโสธร", "บึงกาฬ"
   ],
   "ภาคตะวันออก": [
-    "Chanthaburi", "Chachoengsao", "Chon Buri", "Prachin Buri",
-    "Rayong", "Sa Kaeo", "Trat"
+    "จันทบุรี", "ฉะเชิงเทรา", "ชลบุรี", "ปราจีนบุรี",
+    "ระยอง", "สระแก้ว", "ตราด"
   ],
   "ภาคใต้": [
     "Chumphon", "Krabi", "Nakhon Si Thammarat", "Narathiwat", "Pattani",
-    "Phangnga", "Phatthalung", "Phuket", "Ranong", "Satun", "Songkhla",
+    "Phangnga", "Phatthalung", "ภูเก็ต", "Ranong", "Satun", "Songkhla",
     "Surat Thani", "Trang", "Yala"
   ]
 };
@@ -99,8 +99,8 @@ export default function MyApp() {
         !!สามารถคลิ้กจังหวัดที่เคยไป!!
       </div> */}
        
-      <div style={{ marginBottom: "50px" }}>  
-        <div
+      <div style={{ marginBottom: "50px" , width: "50%" , height: "auto" }}>  
+        <div style={{ textAlign: "center" }}
           dangerouslySetInnerHTML={{ __html: svgContent }}
           onClick={handleLocationClick} 
         ></div>
