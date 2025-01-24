@@ -10,7 +10,9 @@ export default function MyApp () {
   const [description1, setDescription1] = useState("")
   const [description2, setDescription2] = useState("")
   const [description3, setDescription3] = useState("")
-  const [date, setDate] = useState("")
+  const [img1, setImg1] = useState("")
+  const [img2, setImg2] = useState("")
+  const [img3, setImg3] = useState("")
   const [provincename, setProvincename] = useState("")
   const descriptionRef = useRef(null);
 
@@ -38,7 +40,9 @@ export default function MyApp () {
       setDescription1(data[provinceName].description1)
       setDescription2(data[provinceName].description2)
       setDescription3(data[provinceName].description3)
-      setDate(data[provinceName].date)
+      setImg1(data[provinceName].img1)
+      setImg2(data[provinceName].img2)
+      setImg3(data[provinceName].img3)
       setProvincename(data[provinceName].provincename)
 
       if (descriptionRef.current) {
@@ -83,9 +87,17 @@ export default function MyApp () {
         </div>
       </div>   
       <div style={{ marginBottom: "10px" , padding: "10px" }}>{description1}</div>
+      <div style={{ marginBottom: "10px" , padding: "10px" , textAlign: "center" }}>
+        <img style={{ width: "30%" , height: "auto"}} src={img1 || null}></img>
+      </div>
       <div style={{ marginBottom: "10px" , padding: "10px" }}>{description2}</div>
+      <div style={{ marginBottom: "10px" , padding: "10px" , textAlign: "center" }}>
+        <img style={{ width: "30%" , height: "auto"}} src={img2 || null}></img>
+      </div>
       <div style={{ marginBottom: "10px" , padding: "10px" }}>{description3}</div>
-      <div style={{ marginBottom: "10px" , padding: "10px" }}>{date}</div>
+      <div style={{ marginBottom: "10px" , padding: "10px" , textAlign: "center" }}>
+        <img style={{ width: "30%" , height: "auto"}} src={img3 || null}></img>
+      </div>
     </div>
 
     <div style={{textAlign: "right", paddingRight: "20px"}}>
