@@ -5,24 +5,24 @@ import { useState, useEffect } from "react";
 
 const regions = {
   "ภาคกลาง": [
-    "กรุงเทพ", "อ่างทอง", "ชัยนาท", "Kamphaeng Phet", "ลพบุรี",
-    "นครนายก", "Nakhon Pathom", "นนทบุรี", "ปทุมธานี",
-    "Phetchabun", "Phichit", "Phitsanulok", "สมุทรปราการ",
+    "กรุงเทพ", "อ่างทอง", "ชัยนาท", "กำแพงเพชร", "ลพบุรี",
+    "นครนายก", "นครปฐม", "นนทบุรี", "ปทุมธานี",
+    "เพชรบูรณ์", "พิจิตร", "พิษณุโลก", "สมุทรปราการ",
     "Samut Sakhon", "Samut Songkhram", "สระบุรี", "สิงห์บุรี",
-    "Suphan Buri", "Uthai Thani", "พระนครศรีอยุธยา", "Nakhon Sawan", "Sukhothai"
+    "สุพรรณบุรี", "อุทัยธานี", "พระนครศรีอยุธยา", "นครสวรรค์", "สุโขทัย"
   ],
   "ภาคเหนือ": [
-    "เชียงใหม่", "Chiang Rai", "Lampang", "Lamphun",
-    "Mae Hong Son", "Nan", "Phayao", "Phrae", "Uttaradit"
+    "เชียงใหม่", "เชียงราย", "ลำปาง", "ลำพูน",
+    "แม่ฮ่องสอน", "น่าน", "พะเยา", "แพร่", "อุตรดิตถ์"
   ],
   "ภาคตะวันตก": [
-    "Tak", "Kanchanaburi", "Phetchaburi", "Prachuap Khiri Khan", "Ratchaburi"
+    "ตาก", "กาญจนบุรี", "Phetchaburi", "Prachuap Khiri Khan", "ราชบุรี"
   ],
   "ภาคตะวันออกเฉียงเหนือ": [
-    "อำนาจเจริญ", "บุรีรัมย์", "ชัยภูมิ", "Kalasin", "Khon Kaen",
-    "Loei", "Maha Sarakham", "Mukdahan", "Nakhon Phanom", "นครราชสีมา",
-    "หนองบัวลำภู", "Nong Khai", "Roi Et", "Sakon Nakhon", "ศรีสะเกษ",
-    "สุรินทร์", "อุบลราชธานี", "Udon Thani", "ยโสธร", "บึงกาฬ"
+    "อำนาจเจริญ", "บุรีรัมย์", "ชัยภูมิ", "กาฬสินธุ์", "ขอนแก่น",
+    "เลย", "มหาสารคาม", "มุกดาหาร", "นครพนม", "นครราชสีมา",
+    "หนองบัวลำภู", "หนองคาย", "ร้อยเอ็ด", "สกลนคร", "ศรีสะเกษ",
+    "สุรินทร์", "อุบลราชธานี", "อุดรธานี", "ยโสธร", "บึงกาฬ"
   ],
   "ภาคตะวันออก": [
     "จันทบุรี", "ฉะเชิงเทรา", "ชลบุรี", "ปราจีนบุรี",
@@ -98,13 +98,13 @@ export default function MyApp() {
       {/* <div style={{ textAlign: "center" , marginBottom: "20px" }}>
         !!สามารถคลิ้กจังหวัดที่เคยไป!!
       </div> */}
-       
-      <div style={{ marginBottom: "50px" , width: "50%" , height: "auto" }}>  
-        <div style={{ textAlign: "center" }}
+         
+      <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+        <div style={{ marginBottom: "50px" , textAlign: "center" , width: "70%" , height: "auto"}}
           dangerouslySetInnerHTML={{ __html: svgContent }}
           onClick={handleLocationClick} 
         ></div>
-      </div>
+      </div>  
  
       <div style={{ color: "#947480" , display: "flex" , gap: "8px" , marginBottom: "10px" , paddingLeft: "20px" }}>
         <div style={{ width: "40px" , height: "40px" , backgroundColor: "#d8b5a6" }}></div>
