@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 
 const regions = {
   "ภาคกลาง": [
-    "Bangkok", "อ่างทอง", "ชัยนาท", "กำแพงเพชร", "ลพบุรี",
+    "กรุงเทพ", "อ่างทอง", "ชัยนาท", "กำแพงเพชร", "ลพบุรี",
     "นครนายก", "นครปฐม", "นนทบุรี", "ปทุมธานี",
     "เพชรบูรณ์", "พิจิตร", "พิษณุโลก", "สมุทรปราการ",
     "สมุทรสาคร", "สมุทรสงคราม", "สระบุรี", "สิงห์บุรี",
@@ -66,14 +66,12 @@ export default function MyApp() {
   }
 
   function highlightProvince(provinceName) {
-    alert(provinceName)
     const target = document.querySelector(`[name='${provinceName}']`) || "Unknown";
-    alert(target.outerHTML)
     if (target === "Unknown") {
-      alert("Could not find province");
+      console.error("Could not find province");
       return;
     }
-    alert("Clicked on province:", provinceName);
+    console.log("Clicked on province:", provinceName);
     if (target.classList.contains(styles.selectedProvince)) {
       target.classList.add(styles.deselectedProvince);
       target.classList.remove(styles.selectedProvince);
