@@ -68,10 +68,10 @@ export default function MyApp() {
   function highlightProvince(provinceName) {
     const target = document.getElementsByName(provinceName)[0] || "Unknown"; // เลือก path ทั้งหมดใน SVG
     if (target === "Unknown") {
-      console.error("Could not find province");
+      alert("Could not find province");
       return;
     }
-    console.log("Clicked on province:", provinceName);
+    alert("Clicked on province:", provinceName);
     if (target.classList.contains(styles.selectedProvince)) {
       target.classList.add(styles.deselectedProvince);
       target.classList.remove(styles.selectedProvince);
