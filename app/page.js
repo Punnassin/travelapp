@@ -183,7 +183,7 @@ export default function MyApp() {
         </button>
       </div>
 
-      <div name="test">
+      <div name="Bangkok">
           test
       </div>
 
