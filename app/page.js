@@ -66,8 +66,9 @@ export default function MyApp() {
   }
 
   function highlightProvince(provinceName) {
+    alert(provinceName)
     const target = document.getElementsByName(provinceName)[0] || "Unknown"; // เลือก path ทั้งหมดใน SVG
-    alert(document.getElementsByName(provinceName)[0])
+    alert(document.getElementsByName("test")[0])
     if (target === "Unknown") {
       alert("Could not find province");
       return;
@@ -181,6 +182,11 @@ export default function MyApp() {
           ไปเที่ยวกันต่อ
         </button>
       </div>
+
+      <div name="test">
+
+      </div>
+
     </>
   );
 }
