@@ -181,10 +181,6 @@ export default function MyApp() {
         </button>
       </div>
 
-      <div name="Bangkok">
-          test
-      </div>
-
     </>
   );
 }
