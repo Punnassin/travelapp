@@ -67,7 +67,7 @@ export default function MyApp() {
 
   function highlightProvince(provinceName) {
     alert(provinceName)
-    const target = document.querySelector([name='${provinceName}']) || "Unknown";
+    const target = document.querySelector(`[name='${provinceName}']`) || "Unknown";
     alert(target.outerHTML)
     if (target === "Unknown") {
       alert("Could not find province");
